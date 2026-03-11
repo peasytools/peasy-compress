@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "peasy-compress"
-version = "0.1.0"
+version = "0.1.1"
 description = "Zero-dependency archive & compression library — ZIP, TAR, gzip, bz2, lzma using only Python stdlib."
 readme = "README.md"
 license = "MIT"
