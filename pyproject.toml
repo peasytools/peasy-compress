@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "peasy-compress"
+version = "0.1.0"
+description = "Zero-dependency archive & compression library — ZIP, TAR, gzip, bz2, lzma using only Python stdlib."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Peasy Tools" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Archiving :: Compression",
+    "Topic :: Utilities",
+]
+keywords = ["archive", "compression", "zip", "tar", "gzip", "bz2", "lzma", "peasy"]
+dependencies = []
+
+[project.optional-dependencies]
+cli = ["typer>=0.9"]
+dev = ["mypy>=1.10", "pytest>=8.0", "ruff>=0.4"]
+
+[project.scripts]
+peasy-compress = "peasy_compress.cli:app"
+
+[project.urls]
+Homepage = "https://peasytools.com"
+Repository = "https://github.com/peasytools/peasy-compress"
+Issues = "https://github.com/peasytools/peasy-compress/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/peasy_compress"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
