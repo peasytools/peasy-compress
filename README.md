@@ -5,11 +5,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://pypi.org/project/peasy-compress/)
 
-Pure Python archive and compression library with zero external dependencies. Create, extract, and inspect [ZIP](https://peasycompress.com/tools/zip/) and [TAR](https://peasycompress.com/tools/tar/) archives, compress and decompress data with 3 algorithms (gzip, bz2, lzma), and manage 5 archive formats (`.zip`, `.tar`, `.tar.gz`, `.tar.bz2`, `.tar.xz`) -- all using only the Python standard library. Every function works with `bytes`, `Path`, or string paths, operates entirely in memory with no filesystem side effects, and returns clean `bytes` or typed dataclasses.
+Pure Python archive and compression library with zero external dependencies. Create, extract, and inspect ZIP and TAR archives, compress and decompress data with 3 algorithms (gzip, bz2, lzma), and manage 5 archive formats (`.zip`, `.tar`, `.tar.gz`, `.tar.bz2`, `.tar.xz`) -- all using only the Python standard library. Every function works with `bytes`, `Path`, or string paths, operates entirely in memory with no filesystem side effects, and returns clean `bytes` or typed dataclasses.
 
-Built for [Peasy Compress](https://peasycompress.com), a free online archive and compression toolkit with interactive tools for [ZIP creation](https://peasycompress.com/tools/zip-create/), [file compression](https://peasycompress.com/tools/gzip/), and [archive inspection](https://peasycompress.com/tools/zip-list/). The library powers 13 functions across 2 archive formats and 3 compression algorithms, providing a consistent, type-safe API for all common compression tasks.
+Built for [Peasy Tools](https://peasytools.com), a free online toolkit with interactive tools for archive creation, file compression, and archive inspection. The library powers 13 functions across 2 archive formats and 3 compression algorithms, providing a consistent, type-safe API for all common compression tasks.
 
-> **Try the interactive tools at [peasycompress.com](https://peasycompress.com)** -- [ZIP Creator](https://peasycompress.com/tools/zip-create/), [TAR Creator](https://peasycompress.com/tools/tar-create/), [Gzip Compress](https://peasycompress.com/tools/gzip/), [Archive Inspector](https://peasycompress.com/tools/zip-list/), and more.
+> **Try the interactive tools at [peasytools.com](https://peasytools.com)** -- archive creation, compression, and inspection tools.
 
 <p align="center">
   <img src="demo.gif" alt="peasy-compress demo -- create ZIP archives, compress with gzip bz2 lzma, inspect TAR contents in Python" width="800">
@@ -73,7 +73,7 @@ assert restored == original
 
 ### ZIP Archives
 
-ZIP is the most widely used archive format, supported natively on Windows, macOS, and Linux. It uses per-file [DEFLATE compression](https://peasycompress.com/glossary/deflate/) (RFC 1951) and supports random access to individual entries without decompressing the entire archive. `peasy-compress` operates entirely in memory -- no temporary files, no filesystem side effects, no `zipfile.ZipFile` context managers to worry about.
+ZIP is the most widely used archive format, supported natively on Windows, macOS, and Linux. It uses per-file [DEFLATE compression](https://peasytools.com/glossary/) (RFC 1951) and supports random access to individual entries without decompressing the entire archive. `peasy-compress` operates entirely in memory -- no temporary files, no filesystem side effects, no `zipfile.ZipFile` context managers to worry about.
 
 | Function | Description |
 |----------|-------------|
@@ -114,7 +114,7 @@ print(f"Updated archive has {zip_list(updated).file_count} files")
 files = zip_extract("/path/to/archive.zip")
 ```
 
-Learn more: [ZIP Archive Tool](https://peasycompress.com/tools/zip-create/) · [What is DEFLATE Compression?](https://peasycompress.com/glossary/deflate/) · [ZIP vs TAR Comparison](https://peasycompress.com/blog/zip-vs-tar/)
+Learn more: [Peasy Tools](https://peasytools.com/) · [DEFLATE Glossary](https://peasytools.com/glossary/)
 
 ### TAR Archives
 
@@ -157,7 +157,7 @@ dist = tar_create(
 )
 ```
 
-Learn more: [TAR Archive Tool](https://peasycompress.com/tools/tar-create/) · [Gzip vs Bz2 vs LZMA](https://peasycompress.com/blog/gzip-vs-bz2-vs-lzma/) · [TAR Format Guide](https://peasycompress.com/glossary/tar/)
+Learn more: [Peasy Tools](https://peasytools.com/) · [TAR Format Glossary](https://peasytools.com/glossary/tar/)
 
 ### Single-File Compression
 
@@ -203,7 +203,7 @@ print(f"bz2:      {len(bz):>6} bytes ({len(bz)/len(data):.1%})")
 print(f"lzma:     {len(xz):>6} bytes ({len(xz)/len(data):.1%})")
 ```
 
-Learn more: [Gzip Compression Tool](https://peasycompress.com/tools/gzip/) · [Bz2 Compression Tool](https://peasycompress.com/tools/bz2/) · [LZMA Compression Tool](https://peasycompress.com/tools/lzma/)
+Learn more: [Peasy Tools](https://peasytools.com/) · [Compression Glossary](https://peasytools.com/glossary/)
 
 ### Compression Algorithm Comparison
 
@@ -240,7 +240,7 @@ for label, data in [("Log file", log_data), ("JSON", json_data), ("Binary", bina
     print(f"  lzma: {len(xz):>7,} ({len(xz)/len(data):5.1%})")
 ```
 
-Learn more: [Compression Algorithm Guide](https://peasycompress.com/blog/gzip-vs-bz2-vs-lzma/) · [Compression Ratio Calculator](https://peasycompress.com/tools/compression-ratio/)
+Learn more: [Peasy Tools](https://peasytools.com/) · [Compression Glossary](https://peasytools.com/glossary/)
 
 ### Archive Inspection
 
@@ -276,7 +276,7 @@ tar_info = tar_list(tar_data, compression="gz")
 print(f"\nTAR format: {tar_info.format}")  # "tar.gz"
 ```
 
-Learn more: [Archive Inspector Tool](https://peasycompress.com/tools/zip-list/) · [Understanding Archive Formats](https://peasycompress.com/glossary/archive/)
+Learn more: [Peasy Tools](https://peasytools.com/) · [Archive Format Glossary](https://peasytools.com/glossary/archive/)
 
 ## Command-Line Interface
 
@@ -354,11 +354,9 @@ peasy-compress gzip input.txt -o /tmp/compressed.gz
 
 ## Learn More About Compression
 
-- **Tools**: [ZIP Creator](https://peasycompress.com/tools/zip-create/) · [TAR Creator](https://peasycompress.com/tools/tar-create/) · [Gzip Compress](https://peasycompress.com/tools/gzip/) · [Archive Inspector](https://peasycompress.com/tools/zip-list/) · [Compression Ratio Calculator](https://peasycompress.com/tools/compression-ratio/)
-- **Formats**: [ZIP Format](https://peasycompress.com/glossary/zip/) · [TAR Format](https://peasycompress.com/glossary/tar/) · [Gzip Format](https://peasycompress.com/glossary/gzip/)
-- **Algorithms**: [DEFLATE](https://peasycompress.com/glossary/deflate/) · [Burrows-Wheeler Transform](https://peasycompress.com/glossary/bwt/) · [LZMA](https://peasycompress.com/glossary/lzma/)
-- **Guides**: [Gzip vs Bz2 vs LZMA](https://peasycompress.com/blog/gzip-vs-bz2-vs-lzma/) · [ZIP vs TAR](https://peasycompress.com/blog/zip-vs-tar/) · [Compression Best Practices](https://peasycompress.com/blog/compression-best-practices/)
-- **API**: [REST API Docs](https://peasycompress.com/developers/) · [OpenAPI Spec](https://peasycompress.com/api/openapi.json)
+- **Tools**: [Peasy Tools](https://peasytools.com/)
+- **Glossary**: [Compression Glossary](https://peasytools.com/glossary/) · [TAR Format](https://peasytools.com/glossary/tar/) · [Archive Format](https://peasytools.com/glossary/archive/)
+- **API**: [REST API Docs](https://peasytools.com/developers/) · [OpenAPI Spec](https://peasytools.com/api/openapi.json)
 
 ## Also Available
 
@@ -376,8 +374,8 @@ Part of the [Peasy Tools](https://peasytools.com) open-source developer utilitie
 | peasy-image | [PyPI](https://pypi.org/project/peasy-image/) | [npm](https://www.npmjs.com/package/peasy-image) | Image resize, crop, convert, watermark -- [peasyimage.com](https://peasyimage.com) |
 | peasytext | [PyPI](https://pypi.org/project/peasytext/) | [npm](https://www.npmjs.com/package/peasytext) | Text case, slug, encode, diff -- [peasytext.com](https://peasytext.com) |
 | peasy-css | [PyPI](https://pypi.org/project/peasy-css/) | [npm](https://www.npmjs.com/package/peasy-css) | CSS gradient, shadow, flexbox, grid -- [peasycss.com](https://peasycss.com) |
-| **peasy-compress** | **[PyPI](https://pypi.org/project/peasy-compress/)** | **[npm](https://www.npmjs.com/package/peasy-compress)** | **Archive & compression -- gzip, zip, tar -- [peasycompress.com](https://peasycompress.com)** |
-| peasy-document | [PyPI](https://pypi.org/project/peasy-document/) | [npm](https://www.npmjs.com/package/peasy-document) | Document conversion -- Markdown, CSV, HTML -- [peasydocument.com](https://peasydocument.com) |
+| **peasy-compress** | **[PyPI](https://pypi.org/project/peasy-compress/)** | **[npm](https://www.npmjs.com/package/peasy-compress)** | **Archive & compression -- gzip, zip, tar -- [peasytools.com](https://peasytools.com)** |
+| peasy-document | [PyPI](https://pypi.org/project/peasy-document/) | [npm](https://www.npmjs.com/package/peasy-document) | Document conversion -- Markdown, CSV, HTML -- [peasytools.com](https://peasytools.com) |
 | peasy-audio | [PyPI](https://pypi.org/project/peasy-audio/) | -- | Audio trim, merge, convert, normalize -- [peasyaudio.com](https://peasyaudio.com) |
 | peasy-video | [PyPI](https://pypi.org/project/peasy-video/) | -- | Video trim, resize, GIF, thumbnails -- [peasyvideo.com](https://peasyvideo.com) |
 | peasy-convert | [PyPI](https://pypi.org/project/peasy-convert/) | -- | Unified CLI: `peasy pdf merge a.pdf b.pdf` -- [peasytools.com](https://peasytools.com) |
