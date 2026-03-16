@@ -1,6 +1,6 @@
 # peasy-compress
 
-[![PyPI](https://img.shields.io/pypi/v/peasy-compress)](https://pypi.org/project/peasy-compress/)
+[![PyPI version](https://agentgif.com/badge/pypi/peasy-compress/version.svg)](https://pypi.org/project/peasy-compress/)
 [![Python](https://img.shields.io/pypi/pyversions/peasy-compress)](https://pypi.org/project/peasy-compress/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://pypi.org/project/peasy-compress/)
