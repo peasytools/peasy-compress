@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/pypi/pyversions/peasy-compress)](https://pypi.org/project/peasy-compress/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://pypi.org/project/peasy-compress/)
+[![GitHub stars](https://agentgif.com/badge/github/peasytools/peasy-compress/stars.svg)](https://github.com/peasytools/peasy-compress)
 
 Pure Python archive and compression library with zero external dependencies. Create, extract, and inspect ZIP and TAR archives, compress and decompress data with 3 algorithms (gzip, bz2, lzma), and manage 5 archive formats (`.zip`, `.tar`, `.tar.gz`, `.tar.bz2`, `.tar.xz`) -- all using only the Python standard library. Every function works with `bytes`, `Path`, or string paths, operates entirely in memory with no filesystem side effects, and returns clean `bytes` or typed dataclasses.
 
