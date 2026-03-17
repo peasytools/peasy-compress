@@ -114,7 +114,7 @@ print(f"Updated archive has {zip_list(updated).file_count} files")
 files = zip_extract("/path/to/archive.zip")
 ```
 
-Learn more: [Peasy Tools](https://peasytools.com/) · [Lossless Compression](https://peasytools.com/glossary/lossless-compression/)
+Learn more: [Archive Formats Compared](https://peasytools.com/guides/archive-formats-compared/) · [What is Lossless Compression?](https://peasytools.com/glossary/lossless-compression/) · [What is Compression Ratio?](https://peasytools.com/glossary/compression-ratio/)
 
 ### TAR Archives
 
@@ -157,7 +157,7 @@ dist = tar_create(
 )
 ```
 
-Learn more: [Peasy Tools](https://peasytools.com/) · [TAR Format Glossary](https://peasytools.com/glossary/tar/)
+Learn more: [Archive Compression Formats Explained](https://peasytools.com/guides/archive-compression-formats-explained/) · [What is TAR?](https://peasytools.com/glossary/tar/) · [What is Archive?](https://peasytools.com/glossary/archive/)
 
 ### Single-File Compression
 
@@ -203,7 +203,7 @@ print(f"bz2:      {len(bz):>6} bytes ({len(bz)/len(data):.1%})")
 print(f"lzma:     {len(xz):>6} bytes ({len(xz)/len(data):.1%})")
 ```
 
-Learn more: [Peasy Tools](https://peasytools.com/) · [Compression Ratio](https://peasytools.com/glossary/compression-ratio/)
+Learn more: [Lossless vs Lossy Compression Guide](https://peasytools.com/guides/lossless-vs-lossy-compression-guide/) · [What is Brotli?](https://peasytools.com/glossary/brotli/) · [What is Entropy?](https://peasytools.com/glossary/entropy/)
 
 ### Compression Algorithm Comparison
 
@@ -240,7 +240,7 @@ for label, data in [("Log file", log_data), ("JSON", json_data), ("Binary", bina
     print(f"  lzma: {len(xz):>7,} ({len(xz)/len(data):5.1%})")
 ```
 
-Learn more: [Peasy Tools](https://peasytools.com/) · [Lossless vs Lossy Compression](https://peasytools.com/guides/lossless-vs-lossy-compression-guide/)
+Learn more: [Archive Format ZIP TAR 7z RAR Compared](https://peasytools.com/guides/archive-format-zip-tar-7z-rar-compared/) · [What is Lossy Compression?](https://peasytools.com/glossary/lossy-compression/) · [What is Compression Ratio?](https://peasytools.com/glossary/compression-ratio/)
 
 ### Archive Inspection
 
@@ -276,7 +276,7 @@ tar_info = tar_list(tar_data, compression="gz")
 print(f"\nTAR format: {tar_info.format}")  # "tar.gz"
 ```
 
-Learn more: [Peasy Tools](https://peasytools.com/) · [Archive Format Glossary](https://peasytools.com/glossary/archive/)
+Learn more: [Archive Formats Compared](https://peasytools.com/guides/archive-formats-compared/) · [What is Archive?](https://peasytools.com/glossary/archive/) · [What is Lossless Compression?](https://peasytools.com/glossary/lossless-compression/)
 
 ## Command-Line Interface
 
@@ -354,10 +354,9 @@ peasy-compress gzip input.txt -o /tmp/compressed.gz
 
 ## Learn More About Compression
 
-- **Tools**: [Compression Tools](https://peasytools.com/) · [All Tools](https://peasytools.com/)
-- **Guides**: [Archive Formats Compared](https://peasytools.com/guides/archive-formats-compared/) · [Lossless vs Lossy Compression](https://peasytools.com/guides/lossless-vs-lossy-compression-guide/) · [All Guides](https://peasytools.com/guides/)
-- **Glossary**: [Archive](https://peasytools.com/glossary/archive/) · [TAR](https://peasytools.com/glossary/tar/) · [Brotli](https://peasytools.com/glossary/brotli/) · [Lossless Compression](https://peasytools.com/glossary/lossless-compression/) · [All Terms](https://peasytools.com/glossary/)
-- **Formats**: [ZIP](https://peasytools.com/formats/zip/) · [TAR](https://peasytools.com/formats/tar/) · [Gzip](https://peasytools.com/formats/gz/) · [All Formats](https://peasytools.com/formats/)
+- **Guides**: [Archive Formats Compared](https://peasytools.com/guides/archive-formats-compared/) · [Lossless vs Lossy Compression](https://peasytools.com/guides/lossless-vs-lossy-compression-guide/) · [Archive Compression Formats Explained](https://peasytools.com/guides/archive-compression-formats-explained/) · [Archive Format ZIP TAR 7z RAR Compared](https://peasytools.com/guides/archive-format-zip-tar-7z-rar-compared/) · [PDF Compression Guide](https://peasytools.com/guides/pdf-compression-guide/) · [PDF Compression Deep Dive](https://peasytools.com/guides/pdf-compression-deep-dive/) · [All Guides](https://peasytools.com/guides/)
+- **Glossary**: [Archive](https://peasytools.com/glossary/archive/) · [TAR](https://peasytools.com/glossary/tar/) · [Brotli](https://peasytools.com/glossary/brotli/) · [Lossless Compression](https://peasytools.com/glossary/lossless-compression/) · [Lossy Compression](https://peasytools.com/glossary/lossy-compression/) · [Compression Ratio](https://peasytools.com/glossary/compression-ratio/) · [Entropy](https://peasytools.com/glossary/entropy/) · [All Terms](https://peasytools.com/glossary/)
+- **Formats**: [ZIP](https://peasytools.com/formats/zip/) · [TAR](https://peasytools.com/formats/tar/) · [Gzip](https://peasytools.com/formats/gz/) · [7z](https://peasytools.com/formats/7z/) · [BZ2](https://peasytools.com/formats/bz2/) · [XZ](https://peasytools.com/formats/xz/) · [LZ4](https://peasytools.com/formats/lz4/) · [Zstandard](https://peasytools.com/formats/zst/) · [RAR](https://peasytools.com/formats/rar/) · [All Formats](https://peasytools.com/formats/)
 - **API**: [REST API Docs](https://peasytools.com/developers/) · [OpenAPI Spec](https://peasytools.com/api/openapi.json)
 
 ## Also Available
