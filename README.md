@@ -354,32 +354,36 @@ peasy-compress gzip input.txt -o /tmp/compressed.gz
 
 ## Learn More About Compression
 
-- **Tools**: [Peasy Tools](https://peasytools.com/)
-- **Glossary**: [Compression Glossary](https://peasytools.com/glossary/) · [TAR Format](https://peasytools.com/glossary/tar/) · [Archive Format](https://peasytools.com/glossary/archive/)
+- **Tools**: [ZIP Creator](https://peasytools.com/tools/zip-creator/) · [File Compressor](https://peasytools.com/tools/file-compressor/) · [Archive Inspector](https://peasytools.com/tools/archive-inspector/) · [All Tools](https://peasytools.com/)
+- **Guides**: [Compression Algorithms Guide](https://peasytools.com/guides/compression-algorithms/) · [Archive Formats Guide](https://peasytools.com/guides/archive-formats/) · [All Guides](https://peasytools.com/guides/)
+- **Glossary**: [Gzip](https://peasytools.com/glossary/gzip/) · [TAR](https://peasytools.com/glossary/tar/) · [Brotli](https://peasytools.com/glossary/brotli/) · [All Terms](https://peasytools.com/glossary/)
+- **Formats**: [ZIP](https://peasytools.com/formats/zip/) · [TAR](https://peasytools.com/formats/tar/) · [All Formats](https://peasytools.com/formats/)
 - **API**: [REST API Docs](https://peasytools.com/developers/) · [OpenAPI Spec](https://peasytools.com/api/openapi.json)
 
 ## Also Available
 
 | Platform | Install | Link |
 |----------|---------|------|
-| **npm** | `npm install peasy-compress` | [npm](https://www.npmjs.com/package/peasy-compress) |
+| **TypeScript / npm** | `npm install peasy-compress` | [npm](https://www.npmjs.com/package/peasy-compress) |
+| **Go** | `go get github.com/peasytools/peasy-compress-go` | [pkg.go.dev](https://pkg.go.dev/github.com/peasytools/peasy-compress-go) |
+| **Rust** | `cargo add peasy-compress` | [crates.io](https://crates.io/crates/peasy-compress) |
+| **Ruby** | `gem install peasy-compress` | [RubyGems](https://rubygems.org/gems/peasy-compress) |
+| **MCP** | `uvx --from "peasy-compress[mcp]" python -m peasy_compress.mcp_server` | [Config](#mcp-server-claude-cursor-windsurf) |
 
 ## Peasy Developer Tools
 
-Part of the [Peasy Tools](https://peasytools.com) open-source developer utilities ecosystem.
+Part of the [Peasy](https://peasytools.com) open-source developer tools ecosystem.
 
 | Package | PyPI | npm | Description |
 |---------|------|-----|-------------|
-| peasy-pdf | [PyPI](https://pypi.org/project/peasy-pdf/) | [npm](https://www.npmjs.com/package/peasy-pdf) | PDF merge, split, compress, encrypt -- [peasypdf.com](https://peasypdf.com) |
-| peasy-image | [PyPI](https://pypi.org/project/peasy-image/) | [npm](https://www.npmjs.com/package/peasy-image) | Image resize, crop, convert, watermark -- [peasyimage.com](https://peasyimage.com) |
-| peasytext | [PyPI](https://pypi.org/project/peasytext/) | [npm](https://www.npmjs.com/package/peasytext) | Text case, slug, encode, diff -- [peasytext.com](https://peasytext.com) |
-| peasy-css | [PyPI](https://pypi.org/project/peasy-css/) | [npm](https://www.npmjs.com/package/peasy-css) | CSS gradient, shadow, flexbox, grid -- [peasycss.com](https://peasycss.com) |
-| **peasy-compress** | **[PyPI](https://pypi.org/project/peasy-compress/)** | **[npm](https://www.npmjs.com/package/peasy-compress)** | **Archive & compression -- gzip, zip, tar -- [peasytools.com](https://peasytools.com)** |
-| peasy-document | [PyPI](https://pypi.org/project/peasy-document/) | [npm](https://www.npmjs.com/package/peasy-document) | Document conversion -- Markdown, CSV, HTML -- [peasytools.com](https://peasytools.com) |
-| peasy-audio | [PyPI](https://pypi.org/project/peasy-audio/) | -- | Audio trim, merge, convert, normalize -- [peasyaudio.com](https://peasyaudio.com) |
-| peasy-video | [PyPI](https://pypi.org/project/peasy-video/) | -- | Video trim, resize, GIF, thumbnails -- [peasyvideo.com](https://peasyvideo.com) |
-| peasy-convert | [PyPI](https://pypi.org/project/peasy-convert/) | -- | Unified CLI: `peasy pdf merge a.pdf b.pdf` -- [peasytools.com](https://peasytools.com) |
-| peasy-mcp | [PyPI](https://pypi.org/project/peasy-mcp/) | -- | Unified MCP hub for AI assistants -- [peasytools.com](https://peasytools.com) |
+| peasy-pdf | [PyPI](https://pypi.org/project/peasy-pdf/) | [npm](https://www.npmjs.com/package/peasy-pdf) | PDF merge, split, compress, 21 operations — [peasypdf.com](https://peasypdf.com) |
+| peasy-image | [PyPI](https://pypi.org/project/peasy-image/) | [npm](https://www.npmjs.com/package/peasy-image) | Image resize, crop, convert, compress, 20 operations — [peasyimage.com](https://peasyimage.com) |
+| peasytext | [PyPI](https://pypi.org/project/peasytext/) | [npm](https://www.npmjs.com/package/peasytext) | Text case, slugify, word count, encoding — [peasytext.com](https://peasytext.com) |
+| peasy-css | [PyPI](https://pypi.org/project/peasy-css/) | [npm](https://www.npmjs.com/package/peasy-css) | CSS gradients, shadows, flexbox, grid generators — [peasycss.com](https://peasycss.com) |
+| **peasy-compress** | **[PyPI](https://pypi.org/project/peasy-compress/)** | **[npm](https://www.npmjs.com/package/peasy-compress)** | **ZIP, TAR, gzip, brotli archive operations — [peasytools.com](https://peasytools.com)** |
+| peasy-document | [PyPI](https://pypi.org/project/peasy-document/) | [npm](https://www.npmjs.com/package/peasy-document) | Markdown, HTML, CSV, JSON conversions — [peasyformats.com](https://peasyformats.com) |
+| peasy-audio | [PyPI](https://pypi.org/project/peasy-audio/) | [npm](https://www.npmjs.com/package/peasy-audio) | Audio convert, trim, merge, normalize — [peasyaudio.com](https://peasyaudio.com) |
+| peasy-video | [PyPI](https://pypi.org/project/peasy-video/) | [npm](https://www.npmjs.com/package/peasy-video) | Video trim, resize, GIF conversion — [peasyvideo.com](https://peasyvideo.com) |
 
 ## License
 
