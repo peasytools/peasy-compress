@@ -73,7 +73,7 @@ assert restored == original
 
 ### ZIP Archives
 
-ZIP is the most widely used archive format, supported natively on Windows, macOS, and Linux. It uses per-file [DEFLATE compression](https://peasytools.com/glossary/) (RFC 1951) and supports random access to individual entries without decompressing the entire archive. `peasy-compress` operates entirely in memory -- no temporary files, no filesystem side effects, no `zipfile.ZipFile` context managers to worry about.
+ZIP is the most widely used archive format, supported natively on Windows, macOS, and Linux. It uses per-file [DEFLATE compression](https://peasytools.com/glossary/lossless-compression/) (RFC 1951) and supports random access to individual entries without decompressing the entire archive. `peasy-compress` operates entirely in memory -- no temporary files, no filesystem side effects, no `zipfile.ZipFile` context managers to worry about.
 
 | Function | Description |
 |----------|-------------|
@@ -114,7 +114,7 @@ print(f"Updated archive has {zip_list(updated).file_count} files")
 files = zip_extract("/path/to/archive.zip")
 ```
 
-Learn more: [Peasy Tools](https://peasytools.com/) · [DEFLATE Glossary](https://peasytools.com/glossary/)
+Learn more: [Peasy Tools](https://peasytools.com/) · [Lossless Compression](https://peasytools.com/glossary/lossless-compression/)
 
 ### TAR Archives
 
@@ -203,7 +203,7 @@ print(f"bz2:      {len(bz):>6} bytes ({len(bz)/len(data):.1%})")
 print(f"lzma:     {len(xz):>6} bytes ({len(xz)/len(data):.1%})")
 ```
 
-Learn more: [Peasy Tools](https://peasytools.com/) · [Compression Glossary](https://peasytools.com/glossary/)
+Learn more: [Peasy Tools](https://peasytools.com/) · [Compression Ratio](https://peasytools.com/glossary/compression-ratio/)
 
 ### Compression Algorithm Comparison
 
@@ -240,7 +240,7 @@ for label, data in [("Log file", log_data), ("JSON", json_data), ("Binary", bina
     print(f"  lzma: {len(xz):>7,} ({len(xz)/len(data):5.1%})")
 ```
 
-Learn more: [Peasy Tools](https://peasytools.com/) · [Compression Glossary](https://peasytools.com/glossary/)
+Learn more: [Peasy Tools](https://peasytools.com/) · [Lossless vs Lossy Compression](https://peasytools.com/guides/lossless-vs-lossy-compression-guide/)
 
 ### Archive Inspection
 
@@ -354,10 +354,10 @@ peasy-compress gzip input.txt -o /tmp/compressed.gz
 
 ## Learn More About Compression
 
-- **Tools**: [ZIP Creator](https://peasytools.com/tools/zip-creator/) · [File Compressor](https://peasytools.com/tools/file-compressor/) · [Archive Inspector](https://peasytools.com/tools/archive-inspector/) · [All Tools](https://peasytools.com/)
-- **Guides**: [Compression Algorithms Guide](https://peasytools.com/guides/compression-algorithms/) · [Archive Formats Guide](https://peasytools.com/guides/archive-formats/) · [All Guides](https://peasytools.com/guides/)
-- **Glossary**: [Gzip](https://peasytools.com/glossary/gzip/) · [TAR](https://peasytools.com/glossary/tar/) · [Brotli](https://peasytools.com/glossary/brotli/) · [All Terms](https://peasytools.com/glossary/)
-- **Formats**: [ZIP](https://peasytools.com/formats/zip/) · [TAR](https://peasytools.com/formats/tar/) · [All Formats](https://peasytools.com/formats/)
+- **Tools**: [Compression Tools](https://peasytools.com/) · [All Tools](https://peasytools.com/)
+- **Guides**: [Archive Formats Compared](https://peasytools.com/guides/archive-formats-compared/) · [Lossless vs Lossy Compression](https://peasytools.com/guides/lossless-vs-lossy-compression-guide/) · [All Guides](https://peasytools.com/guides/)
+- **Glossary**: [Archive](https://peasytools.com/glossary/archive/) · [TAR](https://peasytools.com/glossary/tar/) · [Brotli](https://peasytools.com/glossary/brotli/) · [Lossless Compression](https://peasytools.com/glossary/lossless-compression/) · [All Terms](https://peasytools.com/glossary/)
+- **Formats**: [ZIP](https://peasytools.com/formats/zip/) · [TAR](https://peasytools.com/formats/tar/) · [Gzip](https://peasytools.com/formats/gz/) · [All Formats](https://peasytools.com/formats/)
 - **API**: [REST API Docs](https://peasytools.com/developers/) · [OpenAPI Spec](https://peasytools.com/api/openapi.json)
 
 ## Also Available
