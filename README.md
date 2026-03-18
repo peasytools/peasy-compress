@@ -13,7 +13,7 @@ Built for [Peasy Tools](https://peasytools.com), a free online toolkit with inte
 > **Try the interactive tools at [peasytools.com](https://peasytools.com)** -- archive creation, compression, and inspection tools.
 
 <p align="center">
-  <img src="demo.gif" alt="peasy-compress demo -- create ZIP archives, compress with gzip bz2 lzma, inspect TAR contents in Python" width="800">
+  <a href="https://agentgif.com/5OLDsg0g"><img src="https://media.agentgif.com/5OLDsg0g.gif" alt="peasy-compress demo -- create ZIP archives, compress with gzip bz2 lzma, inspect TAR contents in Python" width="800"></a>
 </p>
 
 ## Table of Contents
