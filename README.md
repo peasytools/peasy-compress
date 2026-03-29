@@ -385,6 +385,17 @@ Part of the [Peasy](https://peasytools.com) open-source developer tools ecosyste
 | peasy-audio | [PyPI](https://pypi.org/project/peasy-audio/) | [npm](https://www.npmjs.com/package/peasy-audio) | Audio convert, trim, merge, normalize — [peasyaudio.com](https://peasyaudio.com) |
 | peasy-video | [PyPI](https://pypi.org/project/peasy-video/) | [npm](https://www.npmjs.com/package/peasy-video) | Video trim, resize, GIF conversion — [peasyvideo.com](https://peasyvideo.com) |
 
+## Embed Widget
+
+Embed [PeasyCompress](https://peasycompress.com) widgets on any website with [peasy-compress-embed](https://widget.peasycompress.com):
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/peasy-compress-embed@1/dist/embed.min.js"></script>
+<div data-peasycompress="entity" data-slug="example"></div>
+```
+
+Zero dependencies · Shadow DOM · 4 themes (light/dark/sepia/auto) · [Widget docs](https://widget.peasycompress.com)
+
 ## License
 
 MIT
